@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <style>
+      
       body {
         background: linear-gradient(
           135deg,
@@ -41,7 +42,7 @@
         font-family: "Cairo", sans-serif;
       }
 
-      /* خلفية النجوم للوضع المظلم */
+      
       .container {
         position: fixed;
         top: 0;
@@ -65,7 +66,7 @@
       body.dark-mode {
         background: #090a0f !important;
       }
-      /* canvas النجوم */
+      
       #starsCanvas {
         position: absolute;
         top: 0;
@@ -73,7 +74,7 @@
         width: 100%;
         height: 100%;
       }
-      /* العناوين */
+      
       .title {
         text-align: right;
         font-family: "Courier New", Courier, monospace;
@@ -83,16 +84,16 @@
         margin-right: 40px;
         margin: 5px;
       }
-      /* تنسيق نص الباينري */
+      
       .say-hello-in-binary {
         text-align: right;
-        font-size: 1.1rem; /* تكبير الحجم */
+        font-size: 1.1rem; 
         font-weight: 900;
         color: #00008b;
-        letter-spacing: 1.5px; /* مسافة بين الأرقام لتعطي شكلاً احترافياً */
+        letter-spacing: 1.5px; 
         line-height: 1;
         margin: 5px;
-        word-break: break-all; /* لضمان توزيع الأرقام بشكل جيد */
+        word-break: break-all; 
       }
       @keyframes fadeInUp {
         from {
@@ -104,7 +105,7 @@
           transform: translateY(0);
         }
       }
-      /* wrapper الكارتين */
+      
       .cards-wrapper {
         display: flex;
         flex-direction: row;
@@ -122,7 +123,7 @@
         transform: scale(0.97);
       }
 
-      /* تعديل الـ Card لضمان محاذاة كل شيء لليمين */
+      
       .card {
         width: 45%;
         max-width: 580px;
@@ -161,7 +162,7 @@
           20px 20px 40px #0a0b0f,
           -20px -20px 40px #252830;
       }
-      /* الحفاظ على العنوان الكبير في المنتصف */
+      
       .uptitle {
         text-align: center;
         font-family: "Cairo", sans-serif;
@@ -171,7 +172,7 @@
         margin-bottom: 15px;
       }
 
-      /* جعل العناوين الجانبية والنصوص العادية لليمين */
+      
       .title-section,
       .normaltext,
       .say-hello-in-binary {
@@ -206,7 +207,7 @@
       body.dark-mode .normaltext a:hover {
         color: #c5e060;
       }
-      /* توحيد اتجاه الأرقام والنصوص اللاتينية */
+      
       [dir="ltr"] {
         unicode-bidi: embed;
         display: inline;
@@ -215,7 +216,7 @@
         font-family: "Cairo", sans-serif;
         font-weight: 700;
       }
-      /* --- إعدادات الزر في أسفل اليمين --- */
+      
       .switch-container {
         display: flex;
         flex-direction: column;
@@ -283,7 +284,7 @@
         background-color: white;
       }
 
-      /* العناصر الداخلية (الغيوم والنجوم) */
+      
       .moon-dot {
         opacity: 0;
         transition: 0.4s;
@@ -388,7 +389,7 @@
           transform: scale(1.2);
         }
       }
-      /* تأثير الحركة عند الدخول */
+      
       .footer-link-container {
         display: flex;
         justify-content: center;
@@ -407,17 +408,17 @@
         display: inline-block;
         font-size: 14px;
         font-weight: 600;
-        width: 130px; /* قمت بزيادته قليلا فقط ليتسع للنص الذي طلبته */
+        width: 130px; 
         text-transform: uppercase;
         cursor: pointer;
         transform: skew(-21deg);
-        /* الإضافات الضرورية لكي لا يخرب التصميم */
+        
         position: relative;
         overflow: hidden;
         z-index: 1;
-        display: block; /* تحويله لعنصر بلوك */
-        margin-left: auto; /* دفع من اليسار */
-        margin-right: auto; /* دفع من اليمين */
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto; 
         display: inline-block;
         position: relative;
         overflow: hidden;
@@ -450,7 +451,7 @@
         opacity: 1;
       }
 
-      /* ---------------- MECHA BUTTON ---------------- */
+      
       .post888-mecha {
         display: inline-block;
         font-family: system-ui, sans-serif;
@@ -684,14 +685,14 @@
           transition: none;
         }
       }
-      /* wrapper لتوسيط الزر داخل الـ card */
+      
       .mecha-container {
         display: flex;
         justify-content: center;
         margin-top: 12px;
       }
 
-      /* ---------------- THEME SWITCH TOGGLE ---------------- */
+      
       .theme-switch {
         --toggle-size: 30px;
         --container-width: 5.625em;
@@ -938,7 +939,7 @@
         transition: var(--transition);
       }
 
-      /* Sun/moon glow effect */
+      
       .theme-switch__sun-moon-container::after {
         content: "";
         position: absolute;
@@ -956,7 +957,7 @@
         opacity: 1;
       }
 
-      /* Shooting stars */
+      
       .theme-switch__shooting-star,
       .theme-switch__shooting-star-2 {
         position: absolute;
@@ -1027,7 +1028,7 @@
         }
       }
 
-      /* Stars cluster */
+      
       .theme-switch__stars-cluster {
         position: absolute;
         inset: 0;
@@ -1068,7 +1069,7 @@
         animation: twinkle 1s infinite ease-in-out 1.2s;
       }
 
-      /* Aurora */
+      
       .theme-switch__aurora {
         position: absolute;
         top: 0;
@@ -1089,7 +1090,7 @@
         transition: opacity 0.3s ease;
       }
 
-      /* Comets */
+      
       .theme-switch__comets {
         position: absolute;
         inset: 0;
@@ -1153,7 +1154,7 @@
         }
       }
 
-      /* Actions */
+      
       .theme-switch__checkbox:checked + .theme-switch__container {
         background-color: var(--container-night-bg);
         background-image: linear-gradient(
@@ -1218,7 +1219,7 @@
         opacity: 1;
       }
 
-      /* ---- زر الـ Scroll ---- */
+      
       .scroll-btn-container {
         position: fixed;
         bottom: 20px;
@@ -1263,7 +1264,7 @@
         display: none;
       }
 
-      /* ---- صفحة الـ Loading ---- */
+      
       #loading-screen {
         position: fixed;
         inset: 0;
@@ -1283,7 +1284,7 @@
         display: flex;
       }
 
-      /* progress bar */
+      
       .loading-progress-wrap {
         width: 220px;
         height: 4px;
@@ -1309,7 +1310,7 @@
         text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
       }
 
-      /* loader rings */
+      
       .loader * {
         box-sizing: border-box;
       }
@@ -1587,7 +1588,7 @@
         }
       }
       .bubbles {
-        --c1: #cebd29; /* Recommendation: same background color */
+        --c1: #cebd29; 
         --c2: #5481bbc9;
         --size-letter: 32px;
         padding: 0.5em 1em;
@@ -1651,7 +1652,38 @@
         filter: brightness(0.9);
       }
 
-      /* ---- Responsive للجوال ---- */
+      .stats-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: "Cairo", sans-serif;
+        font-size: 1rem;
+        margin-top: 8px;
+      }
+      .stats-table tr {
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+      }
+      .stats-table tr:last-child {
+        border-bottom: none;
+      }
+      .stats-table td {
+        padding: 10px 8px;
+        color: #444;
+      }
+      .stats-table td:first-child {
+        font-weight: 700;
+        width: 45%;
+        color: #333;
+      }
+      body.dark-mode .stats-table td {
+        color: #ccc;
+      }
+      body.dark-mode .stats-table td:first-child {
+        color: #eee;
+      }
+      body.dark-mode .stats-table tr {
+        border-bottom-color: rgba(255,255,255,0.08);
+      }
+
       @media (max-width: 768px) {
         .cards-wrapper {
           flex-direction: column;
@@ -1703,7 +1735,7 @@
     </style>
   </head>
   <body id="mainBody">
-    <!-- صفحة التحميل -->
+    
     <div id="loading-screen">
       <div class="loading-progress-wrap">
         <div class="loading-progress-bar" id="progressBar"></div>
@@ -1727,7 +1759,7 @@
       <div class="loading-text">جاري تحميل ...</div>
     </div>
 
-    <!-- أزرار الـ Scroll -->
+    
     <div class="scroll-btn-container">
       <button
         class="scroll-btn"
@@ -1787,10 +1819,12 @@
         </div>
 
         <p class="normaltext">
-          👨‍🏫 <strong>عدد الطاقم:</strong> 244 (أساتذة، إداريون، عمال)<br />
-          🎓 <strong>عدد التلاميذ:</strong> 350 تلميذاً<br />
-          🏫 <strong>عدد الأقسام:</strong> 12 قسماً<br />
-          🔬 <strong>عدد المخابر:</strong> 4 مخابر
+          <table class="stats-table">
+            <tr><td>عدد الطاقم</td><td>244 (أساتذة، إداريون، عمال)</td></tr>
+            <tr><td>عدد التلاميذ</td><td>350 تلميذاً</td></tr>
+            <tr><td>عدد الأقسام</td><td>12 قسماً</td></tr>
+            <tr><td>عدد المخابر</td><td>4 مخابر</td></tr>
+          </table>
         </p>
       </div>
 
@@ -1806,7 +1840,7 @@
             ><span
               class="__cf_email__"
               data-cfemail="dbb6b7baa2b0bab2b5bdb4e9ed9bbcb6bab2b7f5b8b4b6"
-              >[mlaykainfo26@gmail.com&#160; protected]</span
+              >[email&#160;protected]</span
             ></a
           ><br />
           🌐 <strong>الموقع الرسمي:</strong>
@@ -1939,7 +1973,7 @@
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
     <script>
-      /* ---- نجوم الـ Canvas ---- */
+      
       (function () {
         const canvas = document.getElementById("starsCanvas");
         const ctx = canvas.getContext("2d");
@@ -1989,7 +2023,7 @@
         });
       })();
 
-      /* ---- الوضع المظلم ---- */
+      
       function toggleTheme() {
         const checkbox = document.querySelector(".theme-switch__checkbox");
         const body = document.getElementById("mainBody");
@@ -2002,7 +2036,7 @@
         }
       }
 
-      /* ---- صفحة التحميل ---- */
+      
       function startLoading() {
         const screen = document.getElementById("loading-screen");
         const bar = document.getElementById("progressBar");
@@ -2024,7 +2058,7 @@
         }, interval);
       }
 
-      /* ---- زر الـ Scroll ---- */
+      
       const scrollTopBtn = document.getElementById("scrollTopBtn");
       const scrollDownBtn = document.getElementById("scrollDownBtn");
       window.addEventListener("scroll", () => {
